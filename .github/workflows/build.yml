@@ -1,0 +1,17 @@
+name: iOS Build
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: macos-latest
+
+    steps:
+      - name: 코드 가져오기
+        uses: actions/checkout@v4
+
+      - name: Xcode 버전 확인
+        run: xcodebuild -version
